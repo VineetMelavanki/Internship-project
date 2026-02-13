@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "buildCommand": "npm install && cd frontend && npm install && npm run build",
+  "outputDirectory": "frontend/dist",
+  "env": {
+    "OPENAI_API_KEY": "@openai_api_key"
+  },
+  "functions": {
+    "backend/api/index.js": {
+      "runtime": "nodejs18.x",
+      "memory": 1024,
+      "maxDuration": 60
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/backend/api"
+    }
+  ]
+}
