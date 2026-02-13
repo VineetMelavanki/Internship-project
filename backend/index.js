@@ -7,7 +7,6 @@ const {Uirouter}=require("./routes/Uiroutes")
 const port=8000;
 app.use(cors());
 app.use(express.json());
-app.use("/ui",Uirouter);
-
+app.use("/api/ui",Uirouter);
 app.listen(port,()=>console.log(`Server started at port ${port}`));
 

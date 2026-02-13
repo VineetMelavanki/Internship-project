@@ -5,7 +5,7 @@ const userUIgeneratorStore=create((set)=>({
 
     code:"",
     plan:"",
-    explaination:"",
+    explanation:"",
     validation:"",
 
     codeHistory:[],
@@ -20,7 +20,7 @@ const userUIgeneratorStore=create((set)=>({
             code,
             codeHistory:[...state.codeHistory,code],
         })),
-    setExplaination:(explaination)=>set({explaination}),
+    setExplanation:(explanation)=>set({explanation}),
     setValidation:(validation)=>set({validation}),
     setLoading:(loading)=>set({loading}),
 

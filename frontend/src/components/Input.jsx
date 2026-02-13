@@ -1,5 +1,3 @@
-export default function Input(props){
-    return(
-        <input{...props} className="input"/>
-    )
+export default function Input({ className = "", ...props }) {
+  return <input className={`input ${className}`.trim()} {...props} />;
 }

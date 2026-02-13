@@ -1,0 +1,113 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+.btn {
+  padding: 8px 16px;
+  background-color: #4f46e5; /* Indigo 600 */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 4px 0;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+.btn:hover {
+  background-color: #3730a3; /* Darker indigo */
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px 0;
+  background-color: #f9f9f9;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+
+.input {
+  padding: 8px;
+  margin: 4px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 14px;
+}
+
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0;
+}
+.table th,
+.table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+.table th {
+  background-color: #f0f0f0;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal {
+  background-color: white;
+  padding: 24px;
+  border-radius: 8px;
+  min-width: 300px;
+  max-width: 500px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f0f0f0;
+  padding: 16px;
+  border-right: 1px solid #ccc;
+}
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: #4f46e5;
+  color: white;
+  border-radius: 5px;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+}
+.navbar li {
+  cursor: pointer;
+}
+
+
+.chart {
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 8px 0;
+  background-color: #fafafa;
+}
