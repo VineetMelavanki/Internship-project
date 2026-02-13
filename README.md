@@ -484,3 +484,6 @@ This is a personal project. For improvements or suggestions, please refer to the
 ## Summary for Internship Applications
 
 > This project showcases a complete full-stack web application combining a modern React dashboard with AI-powered UI code generation. Built with industry-standard tools (React 19, Vite, Tailwind CSS, Node.js, Express), it demonstrates proficiency in frontend design, backend API development, and integration with third-party LLM APIs. While the OpenAI integration encountered token limitations, the project includes proper error handling and graceful degradation—skills essential for production applications. The responsive dashboard and live code preview features highlight attention to user experience and code architecture.
+
+
+NOTE : I HAVE NOT PROVIDED MY OPRNAI API_KEY KINDLY ADD IT INTO .env FILE INSIDE BACKEND FOLDER
