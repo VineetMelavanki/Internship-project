@@ -1,10 +1,12 @@
 {
-  "name": "backend",
+  "name": "internship-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend API for AI UI Generator",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "start":"node index.js"
+    "start": "node index.js",
+    "dev": "node index.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,3 +17,4 @@
     "openai": "^6.21.0"
   }
 }
+

@@ -1,10 +1,9 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const { Uirouter } = require("./routes/Uiroutes");
+const { Uirouter } = require("../routes/Uiroutes");
 
 const app = express();
-const port = process.env.PORT || 8000;
 
 // Middleware
 app.use(cors({
@@ -18,32 +17,15 @@ app.use("/api/ui", Uirouter);
 
 // Health check endpoint
 app.get("/api/health", (req, res) => {
-  res.json({ 
-    status: "OK", 
-    timestamp: new Date().toISOString(),
-    environment: process.env.NODE_ENV || "development"
-  });
+  res.json({ status: "OK", timestamp: new Date().toISOString() });
 });
 
-// Server info endpoint
+// Server info
 app.get("/api/info", (req, res) => {
   res.json({
     name: "AI UI Generator Backend",
     version: "1.0.0",
-    timestamp: new Date().toISOString(),
-    environment: process.env.NODE_ENV || "development"
-  });
-});
-
-// Root endpoint
-app.get("/", (req, res) => {
-  res.json({ 
-    message: "AI UI Generator Backend API",
-    endpoints: {
-      health: "/api/health",
-      info: "/api/info",
-      generate: "POST /api/ui/generate-ui"
-    }
+    timestamp: new Date().toISOString()
   });
 });
 
@@ -56,14 +38,12 @@ app.use((err, req, res, next) => {
   });
 });
 
-// Start server only in development or when run directly
+// For local development
 if (require.main === module) {
+  const port = process.env.PORT || 8000;
   app.listen(port, () => {
-    console.log(`✅ Server running on http://localhost:${port}`);
-    console.log(`📍 Health check: http://localhost:${port}/api/health`);
+    console.log(`Server running on http://localhost:${port}`);
   });
 }
 
 module.exports = app;
-
-
