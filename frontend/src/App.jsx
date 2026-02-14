@@ -43,7 +43,7 @@ export default function App() {
 
     setLoading(true);
     try {
-      const res = await axios.post(`${API_URL}/ui/generate-ui`, {
+      const res = await axios.post(`${API_URL}/api/ui/generate-ui`, {
         prompt,
         currentCode: code || "",
       });
