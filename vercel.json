@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "buildCommand": "npm install && cd frontend && npm install && npm run build",
+  "buildCommand": "cd frontend && npm ci && npm run build && cd ../backend && npm ci",
   "outputDirectory": "frontend/dist",
+  "installCommand": "npm ci",
   "env": {
-    "OPENAI_API_KEY": "@openai_api_key"
+    "OPENAI_API_KEY": "@openai_api_key",
+    "FRONTEND_URL": "@frontend_url"
   },
   "functions": {
     "backend/api/index.js": {

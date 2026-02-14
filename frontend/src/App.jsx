@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import useUIGeneratorStore from "./store";
 import { LiveProvider, LivePreview, LiveEditor } from "react-live";
+import { API_URL } from "./config";
 
 import Button from "./components/Button";
 import Card from "./components/Card";
@@ -42,8 +43,7 @@ export default function App() {
 
     setLoading(true);
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || "/api";
-      const res = await axios.post(`${apiUrl}/ui/generate-ui`, {
+      const res = await axios.post(`${API_URL}/ui/generate-ui`, {
         prompt,
         currentCode: code || "",
       });
